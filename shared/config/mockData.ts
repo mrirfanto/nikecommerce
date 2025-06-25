@@ -7,7 +7,7 @@ export const mockProducts: Product[] = [
     category: "Electronics",
     price: 199.99,
     description: "High-quality wireless headphones with noise cancellation and long-lasting battery.",
-    imageUrl: "https://via.placeholder.com/400x300?text=Wireless+Headphones"
+    imageUrl: "https://placehold.co/400x300?text=Wireless+Headphones"
   },
   {
     id: "2",
@@ -15,7 +15,7 @@ export const mockProducts: Product[] = [
     category: "Electronics",
     price: 249.00,
     description: "Stay connected with this sleek and feature-rich smartwatch. Tracks fitness, heart rate, and notifications.",
-    imageUrl: "https://via.placeholder.com/400x300?text=Smartwatch"
+    imageUrl: "https://placehold.co/400x300?text=Smartwatch"
   },
   {
     id: "3",
@@ -23,7 +23,7 @@ export const mockProducts: Product[] = [
     category: "Clothing",
     price: 29.50,
     description: "Comfortable cotton t-shirt, perfect for everyday wear. Available in various colors.",
-    imageUrl: "https://via.placeholder.com/400x300?text=Classic+T-Shirt"
+    imageUrl: "https://placehold.co/400x300?text=Classic+T-Shirt"
   },
   {
     id: "4",
@@ -31,7 +31,7 @@ export const mockProducts: Product[] = [
     category: "Books",
     price: 15.99,
     description: "An engaging tale of adventure and mystery. A must-read for book lovers.",
-    imageUrl: "https://via.placeholder.com/400x300?text=Fiction+Novel"
+    imageUrl: "https://placehold.co/400x300?text=Fiction+Novel"
   },
   {
     id: "5",
@@ -39,7 +39,7 @@ export const mockProducts: Product[] = [
     category: "Electronics",
     price: 75.00,
     description: "Compact and powerful speaker with rich sound and long battery life. Perfect for travel.",
-    imageUrl: "https://via.placeholder.com/400x300?text=Bluetooth+Speaker"
+    imageUrl: "https://placehold.co/400x300?text=Bluetooth+Speaker"
   }
 ];
 
