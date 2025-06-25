@@ -1,46 +1,50 @@
-import { Product } from '@shared/types/product'
+import { Product } from '@shared/types/product';
 
 export const mockProducts: Product[] = [
   {
-    id: "1",
-    name: "Wireless Headphones",
-    category: "Electronics",
+    id: '1',
+    name: 'Wireless Headphones',
+    category: 'Electronics',
     price: 199.99,
-    description: "High-quality wireless headphones with noise cancellation and long-lasting battery.",
-    imageUrl: "https://placehold.co/400x300?text=Wireless+Headphones"
+    description:
+      'High-quality wireless headphones with noise cancellation and long-lasting battery.',
+    imageUrl: 'https://placehold.co/400x300?text=Wireless+Headphones',
   },
   {
-    id: "2",
-    name: "Smartwatch",
-    category: "Electronics",
-    price: 249.00,
-    description: "Stay connected with this sleek and feature-rich smartwatch. Tracks fitness, heart rate, and notifications.",
-    imageUrl: "https://placehold.co/400x300?text=Smartwatch"
+    id: '2',
+    name: 'Smartwatch',
+    category: 'Electronics',
+    price: 249.0,
+    description:
+      'Stay connected with this sleek and feature-rich smartwatch. Tracks fitness, heart rate, and notifications.',
+    imageUrl: 'https://placehold.co/400x300?text=Smartwatch',
   },
   {
-    id: "3",
-    name: "Classic T-Shirt",
-    category: "Clothing",
-    price: 29.50,
-    description: "Comfortable cotton t-shirt, perfect for everyday wear. Available in various colors.",
-    imageUrl: "https://placehold.co/400x300?text=Classic+T-Shirt"
+    id: '3',
+    name: 'Classic T-Shirt',
+    category: 'Clothing',
+    price: 29.5,
+    description:
+      'Comfortable cotton t-shirt, perfect for everyday wear. Available in various colors.',
+    imageUrl: 'https://placehold.co/400x300?text=Classic+T-Shirt',
   },
   {
-    id: "4",
-    name: "Fiction Novel",
-    category: "Books",
+    id: '4',
+    name: 'Fiction Novel',
+    category: 'Books',
     price: 15.99,
-    description: "An engaging tale of adventure and mystery. A must-read for book lovers.",
-    imageUrl: "https://placehold.co/400x300?text=Fiction+Novel"
+    description: 'An engaging tale of adventure and mystery. A must-read for book lovers.',
+    imageUrl: 'https://placehold.co/400x300?text=Fiction+Novel',
   },
   {
-    id: "5",
-    name: "Portable Bluetooth Speaker",
-    category: "Electronics",
-    price: 75.00,
-    description: "Compact and powerful speaker with rich sound and long battery life. Perfect for travel.",
-    imageUrl: "https://placehold.co/400x300?text=Bluetooth+Speaker"
-  }
+    id: '5',
+    name: 'Portable Bluetooth Speaker',
+    category: 'Electronics',
+    price: 75.0,
+    description:
+      'Compact and powerful speaker with rich sound and long battery life. Perfect for travel.',
+    imageUrl: 'https://placehold.co/400x300?text=Bluetooth+Speaker',
+  },
 ];
 
 export const categories = ['All', 'Electronics', 'Clothing', 'Books'] as const;
