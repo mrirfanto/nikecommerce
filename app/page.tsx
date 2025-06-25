@@ -9,7 +9,7 @@ export default function HomePage() {
         <p className="text-gray-600">Discover our curated selection of high-quality products</p>
       </div>
 
-      <ProductListClient products={mockProducts} />
+      <ProductListClient initialProducts={mockProducts} />
     </div>
   );
 }

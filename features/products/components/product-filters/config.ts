@@ -1,9 +1,4 @@
-import { Category, FilterOption, ProductFilters, SortOption } from '@/shared/types/product-filter';
-
-export const defaultFilterValue: ProductFilters = {
-  category: 'all',
-  sort: 'name-asc',
-};
+import { Category, FilterOption, SortOption } from '@/shared/types/product-filter';
 
 export const sortOptions: FilterOption<SortOption>[] = [
   {

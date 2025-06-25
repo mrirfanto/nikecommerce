@@ -1,22 +1,20 @@
 'use client';
 
 import { Product } from '@/shared/types/product';
-import ProductFilters from '../product-filters';
-import { defaultFilterValue } from '../product-filters/config';
-import ProductGrid from '../product-grid';
+import ProductFilters from '@features/products/components/product-filters';
+import ProductGrid from '@features/products/components/product-grid';
+import { useProducts } from '@features/products/hooks/useProducts';
 
 interface ProductListClientProps {
-  products: Product[];
+  initialProducts: Product[];
 }
 
-export default function ProductListClient({ products }: ProductListClientProps) {
-  const handleChangeFilter = () => {
-    //TODO: handle filter change from custom hooks
-  };
+export default function ProductListClient({ initialProducts }: ProductListClientProps) {
+  const { filters, handleChangeFilter, products } = useProducts(initialProducts);
 
   return (
     <div>
-      <ProductFilters filters={defaultFilterValue} onFilterChange={handleChangeFilter} />
+      <ProductFilters filters={filters} onFilterChange={handleChangeFilter} />
 
       <div className="mb-4">
         <p className="text-sm text-gray-600">

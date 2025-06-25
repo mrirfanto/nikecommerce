@@ -3,7 +3,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { userEvent } from '@testing-library/user-event';
 
 import ProductFilters from '.';
-import { defaultFilterValue } from './config';
+import { defaultFilterValue } from '@features/products/config/filterValue';
 
 describe('ProductFilters', () => {
   const mockOnFilterChange = vi.fn();

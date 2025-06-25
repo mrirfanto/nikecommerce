@@ -1,11 +1,11 @@
-import { describe, it, expect } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { describe, it, expect } from 'vitest';
+import { render, screen } from '@testing-library/react';
 
-import { mockProducts } from "@/shared/config/mockData";
-import { ProductCard } from ".";
+import { mockProducts } from '@shared/config/mockData';
+import { ProductCard } from '.';
 
-describe("ProductCard", () => {
-  it("should render accordingly", () => {
+describe('ProductCard', () => {
+  it('should render accordingly', () => {
     const mockProduct = mockProducts[0];
 
     render(<ProductCard product={mockProduct} />);
