@@ -10,13 +10,13 @@ interface ProductCardProps {
 export function ProductCard({ product }: ProductCardProps) {
   return (
     <Link href={`/products/${product.id}`}>
-      <div className="cursor-pointer hover:shadow-lg">
-        <div className="w-full sm:h-[120px] lg:h-[240px] relative">
+      <div className="border border-slate-300 md:border-none cursor-pointer rounded-lg hover:shadow-lg">
+        <div className="w-full rounded-lg sm:h-[120px] lg:h-[240px] relative">
           <Image
             src={product.imageUrl}
             alt={product.name}
             fill
-            className="object-cover group-hover:opacity-95 transition-opacity duration-200"
+            className="object-cover rounded-t-lg group-hover:opacity-95 transition-opacity duration-200"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
