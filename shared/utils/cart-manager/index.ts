@@ -62,7 +62,7 @@ export class CartManager {
     const cart = CartManager.getCartItems();
     const existingCartItemIndex = cart.items.findIndex((cartItem) => cartItem.id === productId);
 
-    if (existingCartItemIndex > 0) {
+    if (existingCartItemIndex >= 0) {
       if (quantity <= 0) {
         cart.items.splice(existingCartItemIndex, 1);
       } else {
