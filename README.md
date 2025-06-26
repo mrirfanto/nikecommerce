@@ -25,10 +25,6 @@ src/
 │   ├── products/
 │   │   └── [id]/
 │   │       └── page.tsx         # Product detail page (/products/[id])
-│   ├── api/
-│   │   └── products/
-│   │       └── [id]/
-│   │           └── route.ts     # GET /api/products/[id]
 │   ├── layout.tsx               # Root layout
 │   └── globals.css              # Global styles
 ├── features/
