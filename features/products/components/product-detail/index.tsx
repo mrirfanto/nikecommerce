@@ -37,7 +37,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
             <p className="text-gray-600">{product.category}</p>
           </div>
 
-          <ProductPurchaseSection productId={product.id} />
+          <ProductPurchaseSection product={product} />
 
           <div className="border-t pt-6">
             <h3 className="text-gray-900 text-lg font-semibold mb-3">Description</h3>
