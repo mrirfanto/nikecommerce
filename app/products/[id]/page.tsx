@@ -12,7 +12,7 @@ async function getProduct(id: string): Promise<Product | null> {
   return null;
 }
 
-export default async function ProductDetailPage({ params }: { params: { id: string } }) {
+export default async function ProductDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const product = await getProduct(id);
 
