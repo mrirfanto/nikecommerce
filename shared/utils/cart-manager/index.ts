@@ -103,8 +103,11 @@ export class CartManager {
   }
 
   private static validateAndCalculateCart(cart: Cart): Cart {
-    const totalPrice = cart.items.reduce((acc, current) => acc + current.price, 0);
     const totalQuantity = cart.items.reduce((acc, current) => acc + current.quantity, 0);
+    const totalPrice = cart.items.reduce(
+      (acc, current) => acc + current.price * current.quantity,
+      0,
+    );
 
     const updatedCart: Cart = {
       ...cart,
