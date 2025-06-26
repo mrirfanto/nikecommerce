@@ -1,7 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { Product } from "@shared/types/product";
+import { Product } from '@shared/types/product';
 
 interface ProductCardProps {
   product: Product;
@@ -21,14 +21,10 @@ export function ProductCard({ product }: ProductCardProps) {
           />
         </div>
         <div className="p-4">
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">
-            {product.name}
-          </h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">{product.name}</h3>
           <p className="text-sm text-gray-600 mb-3">{product.description}</p>
           <div className="flex justify-between items-center">
-            <span className="text-xl font-bold text-gray-900">
-              ${product.price.toFixed(2)}
-            </span>
+            <span className="text-xl font-bold text-gray-900">${product.price.toFixed(2)}</span>
             <span className="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
               {product.category}
             </span>

@@ -4,7 +4,7 @@ import { mockProducts } from '@shared/config/mockData';
 export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
   await new Promise((resolve) => setTimeout(resolve, 500));
 
-  const { id } = params;
+  const { id } = await params;
 
   const product = mockProducts.find((product) => product.id === id);
   if (!product) {

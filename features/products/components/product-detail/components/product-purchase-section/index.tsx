@@ -2,7 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import { ShoppingCart, Minus, Plus } from 'lucide-react';
-import { Product } from '@/shared/types/product';
+import { Bounce, toast, ToastContainer } from 'react-toastify';
+
+import { Product } from '@shared/types/product';
+import { useCart } from '@shared/hooks/useCart';
 
 interface ProductPurchaseSectionProps {
   productId: string;
@@ -12,6 +15,8 @@ export default function ProductPurchaseSection({ productId }: ProductPurchaseSec
   const [productData, setProductData] = useState<Product | null>(null);
   const [quantity, setQuantity] = useState(1);
   const [loading, setLoading] = useState(true);
+
+  const { addToCart } = useCart();
 
   useEffect(() => {
     const fetchDynamicData = async () => {
@@ -31,9 +36,24 @@ export default function ProductPurchaseSection({ productId }: ProductPurchaseSec
   }, [productId]);
 
   const handleAddToCart = async () => {
+    if (!productData) return;
+
     try {
-      // TODO: Add to cart logic
-      console.log(`Adding ${quantity} of product ${productId} to cart`);
+      addToCart(productData, quantity);
+
+      toast.success('Successfully add item into cart!', {
+        position: 'bottom-right',
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+        transition: Bounce,
+      });
+
+      setQuantity(0);
     } catch (error) {
       console.error('Failed to add to cart:', error);
     }
@@ -59,6 +79,7 @@ export default function ProductPurchaseSection({ productId }: ProductPurchaseSec
 
   return (
     <div className="space-y-6">
+      <ToastContainer />
       <div className="flex items-center gap-3">
         <span className="text-3xl font-bold text-gray-900">${productData.price}</span>
       </div>
