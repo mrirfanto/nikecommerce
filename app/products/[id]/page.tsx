@@ -1,15 +1,29 @@
-export default async function ProductDetailPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+import { notFound } from 'next/navigation';
+
+import ProductDetail from '@features/products/components/product-detail';
+import { mockProducts } from '@/shared/config/mockData';
+import { Product } from '@/shared/types/product';
+
+export async function generateStaticParams() {
+  const productIds = ['1', '2', '3', '4', '5'];
+  return productIds.map((id) => ({ id }));
+}
+
+async function getStaticProduct(id: string): Promise<Product | null> {
+  const product = mockProducts.find((product) => product.id === id);
+
+  if (product) return product;
+
+  return null;
+}
+
+export default async function ProductDetailPage({ params }: { params: { id: string } }) {
   const { id } = await params;
-  return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">Product Detail</h1>
-      <div className="text-center py-12">
-        <p className="text-gray-600">Product ID: {id}</p>
-      </div>
-    </div>
-  );
+  const product = await getStaticProduct(id);
+
+  if (!product) {
+    return notFound();
+  }
+
+  return <ProductDetail product={product} />;
 }

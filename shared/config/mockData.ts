@@ -9,6 +9,7 @@ export const mockProducts: Product[] = [
     description:
       'High-quality wireless headphones with noise cancellation and long-lasting battery.',
     imageUrl: 'https://placehold.co/400x300?text=Wireless+Headphones',
+    stock: 23,
   },
   {
     id: '2',
@@ -18,6 +19,7 @@ export const mockProducts: Product[] = [
     description:
       'Stay connected with this sleek and feature-rich smartwatch. Tracks fitness, heart rate, and notifications.',
     imageUrl: 'https://placehold.co/400x300?text=Smartwatch',
+    stock: 12,
   },
   {
     id: '3',
@@ -27,6 +29,7 @@ export const mockProducts: Product[] = [
     description:
       'Comfortable cotton t-shirt, perfect for everyday wear. Available in various colors.',
     imageUrl: 'https://placehold.co/400x300?text=Classic+T-Shirt',
+    stock: 47,
   },
   {
     id: '4',
@@ -35,6 +38,7 @@ export const mockProducts: Product[] = [
     price: 15.99,
     description: 'An engaging tale of adventure and mystery. A must-read for book lovers.',
     imageUrl: 'https://placehold.co/400x300?text=Fiction+Novel',
+    stock: 8,
   },
   {
     id: '5',
@@ -44,6 +48,7 @@ export const mockProducts: Product[] = [
     description:
       'Compact and powerful speaker with rich sound and long battery life. Perfect for travel.',
     imageUrl: 'https://placehold.co/400x300?text=Bluetooth+Speaker',
+    stock: 31,
   },
 ];
 

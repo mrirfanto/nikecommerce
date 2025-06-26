@@ -1,9 +1,10 @@
 'use client';
 
-import { Product } from '@/shared/types/product';
-import ProductFilters from '@features/products/components/product-filters';
-import ProductGrid from '@features/products/components/product-grid';
+import { Product } from '@shared/types/product';
 import { useProducts } from '@features/products/hooks/useProducts';
+
+import ProductFilters from './components/product-filters';
+import ProductGrid from './components/product-grid';
 
 interface ProductListClientProps {
   initialProducts: Product[];
