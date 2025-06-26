@@ -55,7 +55,7 @@ export class CartManager {
     const updatedCart = CartManager.validateAndCalculateCart(cart);
     CartManager.setCartItems(updatedCart);
 
-    return cart;
+    return updatedCart;
   }
 
   static updateQuantity({ productId, quantity }: { productId: string; quantity: number }): Cart {
@@ -73,7 +73,7 @@ export class CartManager {
     const updatedCart = CartManager.validateAndCalculateCart(cart);
     CartManager.setCartItems(updatedCart);
 
-    return cart;
+    return updatedCart;
   }
 
   static removeFromCart(productId: string): Cart {
@@ -84,7 +84,7 @@ export class CartManager {
     const updatedCart = CartManager.validateAndCalculateCart(cart);
     CartManager.setCartItems(updatedCart);
 
-    return cart;
+    return updatedCart;
   }
 
   static clearCart(): Cart {
